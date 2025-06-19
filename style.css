@@ -1,62 +1,203 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 100%;
-    overflow-x: hidden;
+
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
 }
-:root{
-    --bg-color: #080808;
-    --second-bg-color: #001005;
-    --text-color: white;
-    --main-color: #00ff51;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0B0E14;
+  color: #E0E6ED;
+  line-height: 1.6;
 }
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
+
+header {
+  background: #0D47A1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
-.header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 4rem 12%;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
+nav {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 1.8rem;
+  color: #A3D5FF;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #E0E6ED;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.nav-links a:hover {
+  background-color: #1976D2;
+}
+
+section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.inicio img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 4px solid #1976D2;
+}
+.inicio h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #A3D5FF;
+}
+.inicio p {
+  text-align: center;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #C4DAF5;
+}
+
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.projeto {
+  background-color: #11131B;
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.projeto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.projeto h3 {
+  margin: 15px;
+  color: #A3D5FF;
+}
+.projeto p {
+  margin: 0 15px 15px;
+  color: #C4DAF5;
+  font-size: 0.95rem;
+}
+.projeto a {
+  display: block;
+  margin: 0 15px 15px;
+  padding: 10px 0;
+  background: #1976D2;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.projeto a:hover {
+  background-color: #0D47A1;
+}
+
+.sobre p {
+  color: #C4DAF5;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.contato form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contato input,
+.contato textarea {
+  background: #11131B;
+  padding: 12px;
+  border: 1px solid #1F2630;
+  border-radius: 4px;
+  color: #E0E6ED;
+}
+.contato input::placeholder,
+.contato textarea::placeholder {
+  color: #8FA9C6;
+}
+.contato button {
+  background: #1976D2;
+  color: #FFF;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.contato button:hover {
+  background: #0D47A1;
+}
+.contato .redes {
+  text-align: center;
+  margin-top: 20px;
+}
+.contato .redes a {
+  color: #A3D5FF;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.contato .redes a:hover {
+  color: #1976D2;
+}
+
+footer {
+  background: #0D47A1;
+  color: #A3D5FF;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .projetos-container {
+    flex-direction: column;
     align-items: center;
-    z-index: 100;
-}
-#menu-icons{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-}
-.logo{
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.logo:houver{
-    transform: scale(1.1);
-}
-span{
-    color: var(--main-color);
-}
-.navbar a{
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    font-weight: 500;
-    border-bottom: 3px solid transparent;
+  }
 }
