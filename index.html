@@ -1,22 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio Pessoal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="Cabeçalho">
-        <a href="#home" class="logo">Vinicius de Araújo <span>Santiago</span></a>
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#sobre">Sobre mim</a>
-            <a href="#services">Serviços</a>
-            <a href="#contact">Contatos</a>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1>Vinicius de Araújo Santiago</h1>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="inicio">
+    <img src="imagens/minhafoto.jpg" alt="Foto de perfil" />
+    <h2>Olá, sejam bem vindos a meu primeiro portfólio pessoal</h2>
+    <p>Sou um estudante de Técnico em desenvolvimento de sistemas, pretendo ingressar neste mercado para mudar a minha realidade e modo de vida.</p>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <h2>Meus Projetos</h2>
+    <div class="projetos-container">
+
+      <div class="projeto">
+        <img src="imagens/exiledkingdoms.png" alt="Projeto 1">
+        <h3>Perfil de progresso</h3>
+        <p>Dentro do jogo Exiled Kingdoms, há muitas informações para se guardar na nossa mente, o que as vezes complica no progresso do jogo, e com este site é possível registrar as áreas que você já visitou, missões que você já completou e alguns itens importantes de se coletar ajudando você a ter um rumo de como seguir o progresso no jogo, além disso há botões clicáveis que vão diretamente para a página da wiki do jogo, sendo bem útil nas suas pesquisas para ter o melhor desenvolvimento no jogo.</p>
+        <a href="https://ek-companion.s3-website-eu-west-1.amazonaws.com/#/map" onclick="alert('Abrindo link do site')" target="_blank">Acessar site</a>
+      </div>
+
+      <div class="projeto">
+        <img src="imagens/dulcesalgados.jpg" alt="Projeto 2">
+        <h3>Dulce Salgados</h3>
+        <p>Este é o projeto em grupo do meu curso técnico de desenvolvimento de sistemas, consiste num site para ajudar um dos seus ex-integrantes com os pedidos, já que eles são donos de uma lanchonete, com este projeto é possível organizar os pedidos e as entregas, podendo ser a domicílio ou retirada no local de preparação.</p>
+        <a href="https://github.com/Thamiresvitoria/Projeto-Integrador" onclick="alert ('Abrindo link do projeto')" target="_blank">Acessar Projeto</a>
+      </div>
+
+      <div class="projeto">
+        <img src="imagens/siscofis.jpeg" alt="Projeto 3">
+        <h3>SISCOFIS</h3>
+        <p>Descrição do projeto.</p>
+        <a href="https://siscofis.com.br" onclick="alert ('Abrindo link do projeto')" target="_blank">Acessar programa</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Me chamo Vinicius de Araújo Santiago, um jovem recifense de 23 anos, atualmente trabalho de carteira assinada na Progresso logística como ajudante de carga e descarga de caminhões e ônibus, porém nos últimos meses venho trabalhando como lavador num lava-jato de rua, tenho vontade de ingressar nesse mercado desde a infância, porém não sabia o nome correto da área, em 2018, estudei eletrônica, onde tive contato com lógica de programação usando Visualg e noções básicas de C++ para programar o Arduino, mas não me interessei muito nessa área <br> <br>
+    Mais alguns anos para frente no ano de 2023 comecei a estudar um pouco de HTML e CSS pois havia me interessado por conta de meu primo, mas após muitos meses sem estudar esqueci muita coisa, mas ainda assim tenho interesse em ingressar neste mercado e ter uma vida mais tranquila, podendo trabalhar para mim mesmo ou alguma empresa que eu  possa trabalhar de home office.</p>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2>Contatos</h2>
+    <form>
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu email" required />
+      <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="redes">
+      <a href="https://www.instagram.com/o.santiago.081/">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Vinicius de Araújo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
